@@ -1,0 +1,32 @@
+resource_manager = Resource()
+
+# Tạo các tile tài nguyên
+tree_tile = Map_Tree(resource_manager)
+gold_tile = Map_Gold(resource_manager)
+
+# Tạo Villager
+villager = Villager(resource_manager)
+
+# Villager thu thập gỗ từ tile cây
+villager.collect(tree_tile, team="Blue")
+
+# Khi đầy tài nguyên, Villager nộp tại Town Center
+villager.drop_resources(None, team="Blue")  # None là giả lập Town Center
+
+resource_manager = Resource()
+
+# Tạo các tile tài nguyên
+tree_tile = Map_Tree(resource_manager)
+gold_tile = Map_Gold(resource_manager)
+
+# Tạo Villager
+villager = Villager(resource_manager)
+
+# Villager thu thập gỗ từ tile cây
+villager.collect(tree_tile, team="Blue")
+
+# Khi đầy tài nguyên, Villager nộp tại Town Center
+villager.drop_resources(None, team="Blue")  # None là giả lập Town Center
+
+villager.collect(gold_tile, team="Blue")
+villager.drop_resources(None, team="Blue")
